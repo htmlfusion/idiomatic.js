@@ -150,7 +150,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 ## Idiomatic Style Manifesto
 
 
-1. <a name="whitespace">Whitespace</a>
+###1. <a name="whitespace">Whitespace</a>
   - Never mix spaces and tabs.
   - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
       - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
@@ -162,7 +162,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
   - Use [Editorconfig](http://editorconfig.org/) when possible.  It supports most IDEs and handles most whitespace settings.
 
 
-2. <a name="spacing">Beautiful Syntax</a>
+###2. <a name="spacing">Beautiful Syntax</a>
 
     A. Parens, Braces, Linebreaks
 
@@ -441,7 +441,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
 
-3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
+###3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
     A. Actual Types
 
@@ -694,7 +694,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-4. <a name="cond">Conditional Evaluation</a>
+###4. <a name="cond">Conditional Evaluation</a>
 
     ```javascript
 
@@ -804,7 +804,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-5. <a name="practical">Practical Style</a>
+###5. <a name="practical">Practical Style</a>
 
     ```javascript
 
@@ -885,7 +885,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-6. <a name="naming">Naming</a>
+###6. <a name="naming">Naming</a>
 
 
 
@@ -1130,7 +1130,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     `thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
 
-7. <a name="misc">Misc</a>
+###7. <a name="misc">Misc</a>
 
     This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
 
@@ -1273,7 +1273,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-8. <a name="native">Native & Host Objects</a>
+###8. <a name="native">Native & Host Objects</a>
 
     The basic principle here is:
 
@@ -1288,7 +1288,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending-built-ins-5211542
 
 
-9. <a name="comments">Comments</a>
+###9. <a name="comments">Comments</a>
 
     #### Single line above the code that is subject
     #### Multiline is good
@@ -1296,7 +1296,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     #### JSDoc style is good, but requires a significant time investment
 
 
-10. <a name="language">One Language Code</a>
+###10. <a name="language">One Language Code</a>
 
     Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
 
