@@ -164,9 +164,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ###2. <a name="spacing">Beautiful Syntax</a>
 
-    A. Parens, Braces, Linebreaks
+    ####A. Parens, Braces, Linebreaks
 
-    ```javascript
+```javascript
 
     // if/else/for/while/try always have spaces, braces and span multiple lines
     // this encourages readability
@@ -226,12 +226,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     } else {
       // statements
     }
-    ```
+```
 
 
     B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
 
-    ```javascript
+```javascript
 
     // 2.B.1.1
     // Variables
