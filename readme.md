@@ -369,7 +369,7 @@ __B. Assignments, Declarations, Functions ( Named, Expression, Constructor )__
     fooBar.options;
     // { a: "alpha" }
 
-    ```
+```
 
 
 __C. Exceptions, Slight Deviations__
@@ -879,13 +879,10 @@ ALWAYS evaluate for the best, most accurate result - the above is a guideline, n
 
     })( this );
 
-    ```
-
+```
 
 
 ###6. <a name="naming">Naming</a>
-
-
 
 __A. You are not a human code compiler/compressor, so don't try to be one.__
 
