@@ -164,7 +164,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ###2. <a name="spacing">Beautiful Syntax</a>
 
-    ####A. Parens, Braces, Linebreaks
+    __A. Parens, Braces, Linebreaks__
 
 ```javascript
 
@@ -229,7 +229,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 ```
 
 
-    B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
+    __B. Assignments, Declarations, Functions ( Named, Expression, Constructor )__
 
 ```javascript
 
@@ -305,9 +305,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         // statements
       }
     }
-    ```
+```
 
-    ```javascript
+```javascript
 
     // 2.B.2.1
     // Named Function Declaration
@@ -373,9 +373,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-    C. Exceptions, Slight Deviations
+    __C. Exceptions, Slight Deviations__
 
-    ```javascript
+```javascript
 
     // 2.C.1.1
     // Functions with callbacks
@@ -402,14 +402,14 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     }
 
-    ```
+```
 
-    D. Consistency Always Wins
+    __D. Consistency Always Wins__
 
     In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
     It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
 
-    ```javascript
+```javascript
 
     // 2.D.1.1
 
@@ -431,19 +431,19 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       // statements
     }
 
-    ```
+ ```
 
-    E. Quotes
+    __E. Quotes__
 
     Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
 
-    F. End of Lines and Empty Lines
+    __F. End of Lines and Empty Lines__
 
     Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
 
 ###3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
-    A. Actual Types
+    __A. Actual Types__
 
     String:
 
@@ -494,20 +494,20 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         object.hasOwnProperty( prop )
         "prop" in object
 
-    B. Coerced Types
+    __B. Coerced Types__
 
     Consider the implications of the following...
 
     Given this HTML:
 
-    ```html
+```html
 
     <input type="text" id="foo-input" value="1">
 
-    ```
+```
 
 
-    ```javascript
+```javascript
 
     // 3.B.1.1
 
@@ -552,12 +552,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     }
 
     // `importantTask()` will be called
-    ```
+```
 
     Here are some common cases along with coercions:
 
 
-    ```javascript
+```javascript
 
     // 3.B.2.1
 
@@ -591,10 +591,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     bool + "";
     // "false"
-    ```
+```
 
 
-    ```javascript
+```javascript
     // 3.B.2.2
 
     var number = 1,
@@ -621,9 +621,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     bool === !!string;
     // true
-    ```
+```
 
-    ```javascript
+```javascript
     // 3.B.2.3
 
     var array = [ "a", "b", "c" ];
@@ -647,9 +647,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     if ( array.indexOf( "a" ) >= 0 ) {
       // ...
     }
-    ```
+```
 
-    ```javascript
+```javascript
     // 3.B.2.4
 
 
@@ -690,13 +690,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-    ```
-
+```
 
 
 ###4. <a name="cond">Conditional Evaluation</a>
 
-    ```javascript
+```javascript
 
     // 4.1.1
     // When only evaluating that an array has length,
@@ -768,10 +767,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // but not `false`, "" or 0
     null == undefined
 
-    ```
+```
     ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
-    ```javascript
+```javascript
 
     // 4.2.1
     // Type coercion and evaluation notes
@@ -801,12 +800,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // Falsy:
     "", 0, null, undefined, NaN, void 0
 
-    ```
+```
 
 
 ###5. <a name="practical">Practical Style</a>
 
-    ```javascript
+```javascript
 
     // 5.1.1
     // A Practical Module
@@ -845,9 +844,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     })( this );
 
-    ```
+```
 
-    ```javascript
+```javascript
 
     // 5.2.1
     // A Practical Constructor
@@ -889,11 +888,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-    A. You are not a human code compiler/compressor, so don't try to be one.
+    __A. You are not a human code compiler/compressor, so don't try to be one.__
 
     The following code is an example of egregious naming:
 
-    ```javascript
+```javascript
 
     // 6.A.1.1
     // Example of code with poor names
@@ -903,13 +902,13 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     }
     var i,a=[],els=q("#foo");
     for(i=0;i<els.length;i++){a.push(els[i]);}
-    ```
+```
 
     Without a doubt, you've written code like this - hopefully that ends today.
 
     Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
 
-    ```javascript
+```javascript
 
     // 6.A.2.1
     // Example of code with improved names
@@ -927,11 +926,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       elements.push( matches[ idx ] );
     }
 
-    ```
+```
 
     A few additional naming pointers:
 
-    ```javascript
+```javascript
 
     // 6.A.3.1
     // Naming strings
@@ -973,13 +972,13 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     methodNamesLikeThis;
     SYMBOLIC_CONSTANTS_LIKE_THIS;
 
-    ```
+```
 
-    B. Faces of `this`
+    __B. Faces of `this`__
 
     Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
 
-    ```javascript
+```javascript
 
     // 6.B.1
     function Device( opts ) {
@@ -1009,12 +1008,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // Just pretend we've inherited EventEmitter ;)
 
-    ```
+```
 
     When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
 
 
-    ```javascript
+```javascript
     // 6.B.2
 
     // eg. lodash/underscore, _.bind()
@@ -1071,11 +1070,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       }), opts.freq || 100 );
     }
 
-    ```
+```
 
     As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
 
-    ```javascript
+```javascript
 
     // 6.B.3
 
@@ -1097,14 +1096,14 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       }, opts.freq || 100 );
     }
 
-    ```
+```
 
 
-    C. Use `thisArg`
+    __C. Use `thisArg`__
 
     Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
 
-    ```javascript
+```javascript
 
     // 6.C.1
 
@@ -1126,7 +1125,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // "bar"
     // "qux"
 
-    ```
+```
 
     `thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
 
@@ -1134,7 +1133,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
 
-    A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements
+    __A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements__
 
     There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
     http://jsperf.com/switch-vs-object-literal-vs-module
@@ -1142,7 +1141,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     Notable improvements can be witnessed here as well:
     https://github.com/rwldrn/idiomatic.js/issues/13
 
-    ```javascript
+```javascript
 
     // 7.A.1.1
     // An example switch statement
@@ -1241,11 +1240,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // [ "Default", 0 ]
 
 
-    ```
+```
 
-    B. Early returns promote code readability with negligible performance difference
+    __B. Early returns promote code readability with negligible performance difference__
 
-    ```javascript
+```javascript
 
     // 7.B.1.1
     // Bad:
@@ -1270,7 +1269,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       return "quux";
     }
 
-    ```
+```
 
 
 ###8. <a name="native">Native & Host Objects</a>
