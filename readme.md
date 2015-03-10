@@ -145,12 +145,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-
-
 ## Idiomatic Style Manifesto
 
 
 ###1. <a name="whitespace">Whitespace</a>
+
   - Never mix spaces and tabs.
   - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
       - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
@@ -164,7 +163,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ###2. <a name="spacing">Beautiful Syntax</a>
 
-    __A. Parens, Braces, Linebreaks__
+__A. Parens, Braces, Linebreaks__
 
 ```javascript
 
@@ -229,7 +228,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 ```
 
 
-    __B. Assignments, Declarations, Functions ( Named, Expression, Constructor )__
+__B. Assignments, Declarations, Functions ( Named, Expression, Constructor )__
 
 ```javascript
 
@@ -373,7 +372,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-    __C. Exceptions, Slight Deviations__
+__C. Exceptions, Slight Deviations__
 
 ```javascript
 
@@ -404,10 +403,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    __D. Consistency Always Wins__
+__D. Consistency Always Wins__
 
-    In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
-    It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
+In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
+It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
 
 ```javascript
 
@@ -433,52 +432,52 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
  ```
 
-    __E. Quotes__
+__E. Quotes__
 
-    Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
+Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
 
-    __F. End of Lines and Empty Lines__
+__F. End of Lines and Empty Lines__
 
-    Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
+Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
 
 ###3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
-    __A. Actual Types__
+__A. Actual Types__
 
-    String:
+String:
 
         typeof variable === "string"
 
-    Number:
+Number:
 
         typeof variable === "number"
 
-    Boolean:
+Boolean:
 
         typeof variable === "boolean"
 
-    Object:
+Object:
 
         typeof variable === "object"
 
-    Array:
+Array:
 
         Array.isArray( arrayLikeObject )
         (wherever possible)
 
-    Node:
+Node:
 
         elem.nodeType === 1
 
-    null:
+null:
 
         variable === null
 
-    null or undefined:
+null or undefined:
 
         variable == null
 
-    undefined:
+undefined:
 
       Global Variables:
 
@@ -494,11 +493,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         object.hasOwnProperty( prop )
         "prop" in object
 
-    __B. Coerced Types__
+__B. Coerced Types__
 
-    Consider the implications of the following...
+Consider the implications of the following...
 
-    Given this HTML:
+Given this HTML:
 
 ```html
 
@@ -554,7 +553,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // `importantTask()` will be called
 ```
 
-    Here are some common cases along with coercions:
+Here are some common cases along with coercions:
 
 
 ```javascript
@@ -768,7 +767,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     null == undefined
 
 ```
-    ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
+ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
 ```javascript
 
@@ -888,9 +887,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-    __A. You are not a human code compiler/compressor, so don't try to be one.__
+__A. You are not a human code compiler/compressor, so don't try to be one.__
 
-    The following code is an example of egregious naming:
+The following code is an example of egregious naming:
 
 ```javascript
 
@@ -904,9 +903,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     for(i=0;i<els.length;i++){a.push(els[i]);}
 ```
 
-    Without a doubt, you've written code like this - hopefully that ends today.
+Without a doubt, you've written code like this - hopefully that ends today.
 
-    Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
+Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
 
 ```javascript
 
@@ -928,7 +927,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    A few additional naming pointers:
+A few additional naming pointers:
 
 ```javascript
 
@@ -974,9 +973,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    __B. Faces of `this`__
+__B. Faces of `this`__
 
-    Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
+Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
 
 ```javascript
 
@@ -1010,7 +1009,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
+When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
 
 
 ```javascript
@@ -1072,7 +1071,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
+As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
 
 ```javascript
 
@@ -1099,9 +1098,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 ```
 
 
-    __C. Use `thisArg`__
+__C. Use `thisArg`__
 
-    Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
+Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
 
 ```javascript
 
@@ -1127,18 +1126,20 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    `thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
+`thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
 
 ###7. <a name="misc">Misc</a>
 
-    This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
+This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
 
-    __A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements__
+__A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements__
 
-    There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
+There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
+
     http://jsperf.com/switch-vs-object-literal-vs-module
 
-    Notable improvements can be witnessed here as well:
+Notable improvements can be witnessed here as well:
+
     https://github.com/rwldrn/idiomatic.js/issues/13
 
 ```javascript
@@ -1242,7 +1243,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ```
 
-    __B. Early returns promote code readability with negligible performance difference__
+__B. Early returns promote code readability with negligible performance difference__
 
 ```javascript
 
@@ -1274,13 +1275,13 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ###8. <a name="native">Native & Host Objects</a>
 
-    The basic principle here is:
+The basic principle here is:
 
-    ### Don't do stupid shit and everything will be ok.
+_Don't do stupid shit and everything will be ok._
 
-    To reinforce this concept, please watch the following presentation:
+To reinforce this concept, please watch the following presentation:
 
-    #### “Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)
+_“Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)_
 
     <iframe src="http://blip.tv/play/g_Mngr6LegI.html" width="480" height="346" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_Mngr6LegI" style="display:none"></embed>
 
@@ -1297,7 +1298,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 ###10. <a name="language">One Language Code</a>
 
-    Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
+Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
 
 ## Appendix
 
